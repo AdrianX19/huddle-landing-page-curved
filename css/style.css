@@ -24,6 +24,9 @@ img {
   width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
 
 /* GENERAL */
 .btn {
@@ -31,6 +34,11 @@ img {
   color: white;
   font-weight: 700;
   border: none;
+  transition: .25s;
+}
+
+.btn:hover {
+  background-color: #FF8ED7
 }
 
 .btn-submit {
@@ -62,6 +70,12 @@ header>button {
   border-radius: 24px;
   border: 1px solid #FF52C1;
   box-shadow: 0 0 5px 0 rgba(255, 82, 193, .22);
+  transition: .25s;
+}
+
+header>button:hover {
+  color: #FF8ED7;
+  border-color: #FF8ED7;
 }
 
 /* MAIN */
@@ -280,6 +294,19 @@ footer::before {
 
 form {
   text-align: right;
+  position: relative;
+}
+
+form.invalid::after {
+  content: 'Check your email please';
+  position: absolute;
+  color: #FF4343;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 600;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
 }
 
 form .email {
@@ -287,13 +314,17 @@ form .email {
   margin-bottom: 16px;
   border-radius: 6px;
   border: none;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 48px;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 form .email:focus {
   outline: none;
+}
+
+form .email.invalid {
+  outline: 2px solid #FF4343;
 }
 
 form .btn-subscribe {
@@ -351,11 +382,18 @@ form .btn-subscribe {
   font-size: 24px;
 }
 
+.social-media i {
+  cursor: pointer;
+  transition: .25s;
+}
+
+.social-media i:hover {
+  color: #00C7FA;
+}
+
 .social-media i:not(:last-child) {
   margin-right: 17px;
 }
-
-
 
 /* MEDIA QUERIES */
 @media (min-width: 960px) {
@@ -566,6 +604,11 @@ form .btn-subscribe {
   .newsletter p {
     width: 344px;
     margin: 16px 0 40px 0;
+  }
+
+  form.invalid::after {
+    bottom: 0;
+    transform: translateY(100%);
   }
 
   form .email {
