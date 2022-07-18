@@ -21,10 +21,6 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![Final result on desktop](./final-result/desktop-final.PNG)
-
 ### Links
 
 - Solution URL: [https://github.com/AdrianX19/huddle-landing-page-curved](https://github.com/AdrianX19/huddle-landing-page-curved)
